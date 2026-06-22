@@ -1,0 +1,31 @@
+import type { ReactNode } from "react";
+import { LeadForm } from "./LeadForm";
+import { Eyebrow } from "./ui-kit";
+import { Reveal } from "./Reveal";
+
+export function PageHero({
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow?: string;
+  title: ReactNode;
+  subtitle: string;
+}) {
+  return (
+    <section className="bg-navy">
+      <div className="container-x grid items-center gap-10 py-16 md:py-20 lg:grid-cols-2">
+        <Reveal>
+          {eyebrow && <Eyebrow gold>{eyebrow}</Eyebrow>}
+          <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
+            {title}
+          </h1>
+          <p className="mt-5 max-w-xl text-lg text-white/75">{subtitle}</p>
+        </Reveal>
+        <Reveal>
+          <LeadForm />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
