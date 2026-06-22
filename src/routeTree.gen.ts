@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PersonalInjuryRouteImport } from './routes/personal-injury'
 import { Route as ImmigrationRouteImport } from './routes/immigration'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
 const PersonalInjuryRoute = PersonalInjuryRouteImport.update({
@@ -23,6 +24,11 @@ const ImmigrationRoute = ImmigrationRouteImport.update({
   path: '/immigration',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/immigration': typeof ImmigrationRoute
   '/personal-injury': typeof PersonalInjuryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/immigration': typeof ImmigrationRoute
   '/personal-injury': typeof PersonalInjuryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/immigration': typeof ImmigrationRoute
   '/personal-injury': typeof PersonalInjuryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/immigration' | '/personal-injury'
+  fullPaths: '/' | '/about' | '/immigration' | '/personal-injury'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/immigration' | '/personal-injury'
-  id: '__root__' | '/' | '/immigration' | '/personal-injury'
+  to: '/' | '/about' | '/immigration' | '/personal-injury'
+  id: '__root__' | '/' | '/about' | '/immigration' | '/personal-injury'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   ImmigrationRoute: typeof ImmigrationRoute
   PersonalInjuryRoute: typeof PersonalInjuryRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImmigrationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   ImmigrationRoute: ImmigrationRoute,
   PersonalInjuryRoute: PersonalInjuryRoute,
 }
