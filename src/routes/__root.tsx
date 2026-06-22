@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -11,23 +10,26 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
+import { MobileCallBar } from "../components/MobileCallBar";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+    <div className="flex min-h-screen items-center justify-center bg-navy px-4">
+      <div className="max-w-md text-center text-white">
+        <h1 className="text-7xl font-semibold">404</h1>
+        <h2 className="mt-4 text-xl font-semibold">Page not found</h2>
+        <p className="mt-2 text-sm text-white/70">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-[999px] bg-gold px-6 py-3 text-sm font-bold text-navy"
           >
             Go home
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -77,19 +79,51 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Personal Injury & Immigration Lawyers | AJK Law Group | Anaheim, CA" },
+      {
+        name: "description",
+        content:
+          "AJK Law Group (Abusharar & Associates) — Anaheim personal injury and immigration attorneys. No fees unless we win. Free confidential case review. Se Habla Español.",
+      },
+      { name: "author", content: "AJK Law Group" },
+      { property: "og:title", content: "AJK Law Group | Anaheim Personal Injury & Immigration Lawyers" },
+      {
+        property: "og:description",
+        content: "Justice for Every Client. Every Time. Free confidential case review.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "AJK Law Group" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap",
+      },
+      { rel: "stylesheet", href: appCss },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LegalService",
+          name: "AJK Law Group",
+          alternateName: "Abusharar & Associates",
+          url: "https://ajkattorneys.com",
+          telephone: "+17145122122",
+          email: "ajklawgroup@ajkattorneys.com",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Anaheim",
+            addressRegion: "CA",
+            addressCountry: "US",
+          },
+          areaServed: "Southern California",
+          knowsAbout: ["Personal Injury", "Immigration Law", "Asylum", "Car Accidents"],
+        }),
       },
     ],
   }),
@@ -118,8 +152,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteHeader />
+      <main className="min-h-screen pb-16 md:pb-0">
+        <Outlet />
+      </main>
+      <SiteFooter />
+      <MobileCallBar />
     </QueryClientProvider>
   );
 }
