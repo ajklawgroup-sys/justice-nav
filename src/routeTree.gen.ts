@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PersonalInjuryRouteImport } from './routes/personal-injury'
 import { Route as ImmigrationRouteImport } from './routes/immigration'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const PersonalInjuryRoute = PersonalInjuryRouteImport.update({
 const ImmigrationRoute = ImmigrationRouteImport.update({
   id: '/immigration',
   path: '/immigration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/immigration': typeof ImmigrationRoute
   '/personal-injury': typeof PersonalInjuryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/immigration': typeof ImmigrationRoute
   '/personal-injury': typeof PersonalInjuryRoute
 }
@@ -51,20 +59,28 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/immigration': typeof ImmigrationRoute
   '/personal-injury': typeof PersonalInjuryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/immigration' | '/personal-injury'
+  fullPaths: '/' | '/about' | '/contact' | '/immigration' | '/personal-injury'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/immigration' | '/personal-injury'
-  id: '__root__' | '/' | '/about' | '/immigration' | '/personal-injury'
+  to: '/' | '/about' | '/contact' | '/immigration' | '/personal-injury'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/immigration'
+    | '/personal-injury'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
   ImmigrationRoute: typeof ImmigrationRoute
   PersonalInjuryRoute: typeof PersonalInjuryRoute
 }
@@ -83,6 +99,13 @@ declare module '@tanstack/react-router' {
       path: '/immigration'
       fullPath: '/immigration'
       preLoaderRoute: typeof ImmigrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
   ImmigrationRoute: ImmigrationRoute,
   PersonalInjuryRoute: PersonalInjuryRoute,
 }
