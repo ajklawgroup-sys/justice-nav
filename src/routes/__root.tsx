@@ -26,7 +26,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-[999px] bg-gold px-6 py-3 text-sm font-bold text-navy"
+            className="inline-flex items-center justify-center rounded-[999px] bg-white px-6 py-3 text-sm font-bold text-navy"
           >
             Go home
           </a>
