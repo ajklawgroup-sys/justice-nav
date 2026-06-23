@@ -33,8 +33,8 @@ export function SiteFooter() {
     <footer className="bg-ink text-white/80">
       <div className="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <Link to="/" className="font-serif text-2xl font-semibold text-white">
-            {FIRM.name}
+          <Link to="/" aria-label={FIRM.name}>
+            <img src={ajkLogo.url} alt={FIRM.name} className="h-12 w-auto brightness-0 invert" />
           </Link>
           <p className="mt-3 max-w-xs text-sm text-white/60">{FIRM.tagline}</p>
           <div className="mt-5 flex gap-3">
