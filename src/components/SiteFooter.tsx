@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, MapPin } from "lucide-react";
 import { FIRM } from "@/lib/firm";
+import ajkLogo from "@/assets/ajk-logo.png.asset.json";
 
 const columns = [
   {
