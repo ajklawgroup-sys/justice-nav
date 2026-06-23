@@ -47,7 +47,7 @@ function Immigration() {
     <>
       <PageHero
         eyebrow="Immigration"
-        title="Immigration Attorneys in Anaheim, CA"
+        title="Immigration Attorneys in California"
         subtitle="From asylum to green cards, we navigate complex immigration matters with compassion and aggressive advocacy."
       />
 
