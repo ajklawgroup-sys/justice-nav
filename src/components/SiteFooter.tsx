@@ -11,7 +11,7 @@ const columns = [
       "Motorcycle Accidents",
       "Slip & Fall",
       "Wrongful Death",
-      "Workers Comp",
+      "Rideshare Accidents",
     ],
     to: "/personal-injury",
   },
@@ -42,7 +42,7 @@ export function SiteFooter() {
                 key={i}
                 href="#"
                 aria-label="social link"
-                className="flex h-9 w-9 items-center justify-center rounded-[999px] border border-white/20 transition-colors hover:border-gold hover:text-gold"
+                className="flex h-9 w-9 items-center justify-center rounded-[999px] border border-white/20 transition-colors hover:border-white hover:text-white"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -56,7 +56,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2 text-sm">
               {col.links.map((l) => (
                 <li key={l}>
-                  <Link to={col.to} className="transition-colors hover:text-gold">
+                  <Link to={col.to} className="transition-colors hover:text-white">
                     {l}
                   </Link>
                 </li>
@@ -70,12 +70,12 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             <li>{FIRM.address}</li>
             <li>
-              <a href={FIRM.phoneHref} className="hover:text-gold">
+              <a href={FIRM.phoneHref} className="hover:text-white">
                 {FIRM.phone}
               </a>
             </li>
             <li>
-              <a href={FIRM.emailHref} className="hover:text-gold">
+              <a href={FIRM.emailHref} className="hover:text-white">
                 {FIRM.email}
               </a>
             </li>
@@ -89,9 +89,9 @@ export function SiteFooter() {
         <div className="container-x flex flex-col gap-3 py-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
           <p>© 2025 {FIRM.name} / {FIRM.alt}. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-gold">Disclaimer</a>
-            <a href="#" className="hover:text-gold">Privacy Policy</a>
-            <Link to="/contact" className="hover:text-gold">Sitemap</Link>
+            <a href="#" className="hover:text-white">Disclaimer</a>
+            <a href="#" className="hover:text-white">Privacy Policy</a>
+            <Link to="/contact" className="hover:text-white">Sitemap</Link>
           </div>
         </div>
         <div className="container-x pb-8 text-xs leading-relaxed text-white/35">
