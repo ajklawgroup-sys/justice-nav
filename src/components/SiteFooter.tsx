@@ -23,7 +23,7 @@ const columns = [
   },
   {
     title: "About",
-    links: ["Our Team", "Testimonials", "Blog", "Careers"],
+    links: ["Our Team", "Blog", "Careers"],
     to: "/about",
   },
 ];
