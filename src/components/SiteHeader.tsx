@@ -18,8 +18,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-navy">
       <div className="container-x flex h-16 items-center justify-between md:h-[72px]">
-        <Link to="/" className="font-serif text-xl font-semibold text-white md:text-2xl">
-          {FIRM.name}
+        <Link to="/" aria-label={FIRM.name}>
+          <img
+            src={ajkLogo.url}
+            alt={FIRM.name}
+            className="h-[38px] w-auto brightness-0 invert md:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
