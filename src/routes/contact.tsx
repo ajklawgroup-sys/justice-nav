@@ -48,23 +48,23 @@ function Contact() {
             <div className="rounded-[4px] border border-border bg-card p-6 shadow-sm">
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-5 w-5 text-amber" />
+                  <MapPin className="mt-0.5 h-5 w-5 text-navy" />
                   <span className="text-ink">{FIRM.address}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-5 w-5 text-amber" />
+                  <Phone className="mt-0.5 h-5 w-5 text-navy" />
                   <a href={FIRM.phoneHref} className="text-ink hover:text-navy">
                     {FIRM.phone}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-5 w-5 text-amber" />
+                  <Mail className="mt-0.5 h-5 w-5 text-navy" />
                   <a href={FIRM.emailHref} className="text-ink hover:text-navy">
                     {FIRM.email}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Clock className="mt-0.5 h-5 w-5 text-amber" />
+                  <Clock className="mt-0.5 h-5 w-5 text-navy" />
                   <span className="text-ink">
                     Mon–Fri 9am–6pm
                     <br />

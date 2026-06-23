@@ -78,7 +78,7 @@ function PersonalInjury() {
         <div className="mx-auto mt-8 grid max-w-2xl gap-3">
           {whyPoints.map((p) => (
             <Reveal key={p} className="flex items-center gap-3 rounded-[4px] border border-border bg-card px-5 py-4">
-              <Check className="h-5 w-5 shrink-0 text-amber" />
+              <Check className="h-5 w-5 shrink-0 text-navy" />
               <span className="text-ink">{p}</span>
             </Reveal>
           ))}

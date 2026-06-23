@@ -28,7 +28,7 @@ const attorneys = [
     role: "Supervising Attorney",
     licensed: "Licensed in MI and MD",
     initials: "AA",
-    bio: "Leading AJK Law Group with a relentless commitment to justice for accident victims and immigrant families across Southern California.",
+    bio: "Leading AJK Law Group with a relentless commitment to justice for accident victims and immigrant families across California.",
   },
   {
     name: "Lewis Jubran, Esq.",
@@ -87,11 +87,11 @@ function About() {
               key={a.name}
               className="rounded-[4px] border border-border bg-card p-7 text-center shadow-sm"
             >
-              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-[999px] bg-navy font-serif text-3xl font-semibold text-gold">
+              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-[999px] bg-navy font-serif text-3xl font-semibold text-white">
                 {a.initials}
               </div>
               <h3 className="mt-5 font-serif text-xl font-semibold text-navy">{a.name}</h3>
-              <p className="mt-1 text-sm font-semibold text-amber">{a.role}</p>
+              <p className="mt-1 text-sm font-semibold text-navy">{a.role}</p>
               <p className="text-xs text-muted-foreground">{a.licensed}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.bio}</p>
             </RevealItem>
@@ -106,7 +106,7 @@ function About() {
         <RevealGroup className="mt-10 grid gap-6 md:grid-cols-3">
           {values.map((v) => (
             <RevealItem key={v.t} className="rounded-[4px] border border-border bg-card p-7 text-center shadow-sm">
-              <v.icon className="mx-auto h-10 w-10 text-amber" />
+              <v.icon className="mx-auto h-10 w-10 text-navy" />
               <h3 className="mt-4 font-serif text-xl font-semibold text-navy">{v.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{v.d}</p>
             </RevealItem>
@@ -114,7 +114,7 @@ function About() {
         </RevealGroup>
         <Reveal className="mx-auto mt-10 max-w-2xl text-center">
           <p className="rounded-[4px] bg-soft px-6 py-4 text-sm text-ink">
-            {FIRM.name} proudly serves English and Arabic-speaking clients across Southern California.
+            {FIRM.name} proudly serves English and Arabic-speaking clients across California.
           </p>
         </Reveal>
       </Section>
