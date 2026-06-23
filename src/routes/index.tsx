@@ -233,7 +233,7 @@ function Home() {
               </a>
               <a
                 href="#lead"
-                className="inline-flex items-center justify-center rounded-[999px] border border-white px-6 py-3 text-sm font-bold text-white transition-opacity hover:opacity-85"
+                className="inline-flex items-center justify-center rounded-[999px] bg-white px-6 py-3 text-sm font-bold text-navy transition-opacity hover:opacity-85"
               >
                 SUBMIT YOUR CASE
               </a>
