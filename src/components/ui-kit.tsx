@@ -23,7 +23,7 @@ export function Eyebrow({ children, gold = false }: { children: ReactNode; gold?
   return (
     <p
       className={`text-xs font-semibold uppercase tracking-[0.18em] ${
-        gold ? "text-gold" : "text-amber"
+        gold ? "text-white" : "text-navy"
       }`}
     >
       {children}
