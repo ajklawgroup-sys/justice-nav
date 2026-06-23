@@ -79,14 +79,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Personal Injury & Immigration Lawyers | AJK Law Group | Anaheim, CA" },
+      { title: "Personal Injury & Immigration Lawyers | AJK Law Group | California" },
       {
         name: "description",
         content:
-          "AJK Law Group (Abusharar & Associates) — Anaheim personal injury and immigration attorneys. No fees unless we win. Free confidential case review. Se Habla Español.",
+          "AJK Law Group — California personal injury & immigration attorneys.",
       },
       { name: "author", content: "AJK Law Group" },
-      { property: "og:title", content: "AJK Law Group | Anaheim Personal Injury & Immigration Lawyers" },
+      { property: "og:title", content: "AJK Law Group | Personal Injury & Immigration Lawyers" },
+      { name: "twitter:title", content: "AJK Law Group | Personal Injury & Immigration Lawyers" },
       {
         property: "og:description",
         content: "Justice for Every Client. Every Time. Free confidential case review.",
