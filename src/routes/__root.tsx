@@ -26,7 +26,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-[999px] bg-gold px-6 py-3 text-sm font-bold text-navy"
+            className="inline-flex items-center justify-center rounded-[999px] bg-white px-6 py-3 text-sm font-bold text-navy"
           >
             Go home
           </a>
@@ -79,14 +79,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Personal Injury & Immigration Lawyers | AJK Law Group | Anaheim, CA" },
+      { title: "Personal Injury & Immigration Lawyers | AJK Law Group | California" },
       {
         name: "description",
         content:
-          "AJK Law Group (Abusharar & Associates) — Anaheim personal injury and immigration attorneys. No fees unless we win. Free confidential case review. Se Habla Español.",
+          "AJK Law Group — California personal injury & immigration attorneys.",
       },
       { name: "author", content: "AJK Law Group" },
-      { property: "og:title", content: "AJK Law Group | Anaheim Personal Injury & Immigration Lawyers" },
+      { property: "og:title", content: "AJK Law Group | Personal Injury & Immigration Lawyers" },
+      { name: "twitter:title", content: "AJK Law Group | Personal Injury & Immigration Lawyers" },
       {
         property: "og:description",
         content: "Justice for Every Client. Every Time. Free confidential case review.",
@@ -100,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap",
       },
       { rel: "stylesheet", href: appCss },
     ],
@@ -111,17 +112,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "LegalService",
           name: "AJK Law Group",
-          alternateName: "Abusharar & Associates",
           url: "https://ajkattorneys.com",
           telephone: "+17145122122",
           email: "ajklawgroup@ajkattorneys.com",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Anaheim",
+            addressLocality: "California",
             addressRegion: "CA",
             addressCountry: "US",
           },
-          areaServed: "Southern California",
+          areaServed: "California",
           knowsAbout: ["Personal Injury", "Immigration Law", "Asylum", "Car Accidents"],
         }),
       },

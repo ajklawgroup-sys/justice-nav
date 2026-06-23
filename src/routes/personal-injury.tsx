@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Car, Truck, Bike, AlertTriangle, HeartCrack, HardHat, Check } from "lucide-react";
+import { Car, Truck, Bike, AlertTriangle, HeartCrack, CarTaxiFront, Check } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { Section } from "@/components/ui-kit";
@@ -11,13 +11,13 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/personal-injury")({
   head: () => ({
     meta: [
-      { title: "Personal Injury Attorneys Anaheim CA | AJK Law Group | Free Consultation" },
+      { title: "Personal Injury Attorneys California | AJK Law Group | Free Consultation" },
       {
         name: "description",
         content:
-          "Injured in an accident? AJK Law Group's Anaheim personal injury attorneys fight for maximum compensation. No fees unless we win. Free case review.",
+          "Injured in an accident? AJK Law Group's California personal injury attorneys fight for maximum compensation. No fees unless we win. Free case review.",
       },
-      { property: "og:title", content: "Personal Injury Attorneys in Anaheim | AJK Law Group" },
+      { property: "og:title", content: "Personal Injury Attorneys in California | AJK Law Group" },
       { property: "og:url", content: "/personal-injury" },
     ],
     links: [{ rel: "canonical", href: "/personal-injury" }],
@@ -31,7 +31,7 @@ const services = [
   { icon: Bike, title: "Motorcycle Accidents", desc: "Protecting riders from biased insurance tactics and lowball offers." },
   { icon: AlertTriangle, title: "Slip & Fall", desc: "Holding property owners accountable for dangerous conditions." },
   { icon: HeartCrack, title: "Wrongful Death", desc: "Compassionate advocacy for families who have lost a loved one." },
-  { icon: HardHat, title: "Workers Compensation", desc: "Securing the benefits you deserve after a workplace injury." },
+  { icon: CarTaxiFront, title: "Rideshare Accidents (Uber/Lyft)", desc: "Holding rideshare companies accountable for injuries to riders and drivers." },
 ];
 
 const whyPoints = [
@@ -54,7 +54,7 @@ function PersonalInjury() {
     <>
       <PageHero
         eyebrow="Personal Injury"
-        title="Personal Injury Attorneys in Anaheim, CA"
+        title="Personal Injury Attorneys in California"
         subtitle="Hurt through no fault of your own? We handle everything while you focus on healing — and you pay nothing unless we win."
       />
 
@@ -78,7 +78,7 @@ function PersonalInjury() {
         <div className="mx-auto mt-8 grid max-w-2xl gap-3">
           {whyPoints.map((p) => (
             <Reveal key={p} className="flex items-center gap-3 rounded-[4px] border border-border bg-card px-5 py-4">
-              <Check className="h-5 w-5 shrink-0 text-amber" />
+              <Check className="h-5 w-5 shrink-0 text-navy" />
               <span className="text-ink">{p}</span>
             </Reveal>
           ))}

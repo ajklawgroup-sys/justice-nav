@@ -23,7 +23,7 @@ export function Eyebrow({ children, gold = false }: { children: ReactNode; gold?
   return (
     <p
       className={`text-xs font-semibold uppercase tracking-[0.18em] ${
-        gold ? "text-gold" : "text-amber"
+        gold ? "text-white" : "text-navy"
       }`}
     >
       {children}
@@ -41,7 +41,7 @@ export function GoldButton({
   to?: string;
 }) {
   const cls =
-    "inline-flex items-center justify-center gap-2 rounded-[999px] bg-gold px-6 py-3 text-sm font-bold text-navy transition-opacity hover:opacity-85";
+    "inline-flex items-center justify-center gap-2 rounded-[999px] border border-navy bg-white px-6 py-3 text-sm font-bold text-navy transition-opacity hover:opacity-85";
   if (to)
     return (
       <Link to={to} className={cls}>

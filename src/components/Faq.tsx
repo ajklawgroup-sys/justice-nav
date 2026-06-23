@@ -16,7 +16,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
           >
             <span className="font-serif text-lg font-medium text-navy">{item.q}</span>
             <ChevronDown
-              className={`h-5 w-5 shrink-0 text-amber transition-transform ${
+              className={`h-5 w-5 shrink-0 text-navy transition-transform ${
                 open === i ? "rotate-180" : ""
               }`}
             />

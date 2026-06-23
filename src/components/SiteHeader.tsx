@@ -26,8 +26,8 @@ export function SiteHeader() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-sm font-medium text-white/90 transition-colors hover:text-gold"
-              activeProps={{ className: "text-gold" }}
+              className="text-sm font-medium text-white/90 transition-colors hover:text-white"
+              activeProps={{ className: "text-white" }}
               activeOptions={{ exact: l.to === "/" }}
             >
               {l.label}
@@ -38,7 +38,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <a
             href={FIRM.phoneHref}
-            className="hidden items-center gap-2 rounded-[999px] bg-gold px-4 py-2 text-sm font-bold text-navy transition-opacity hover:opacity-85 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-[999px] bg-white px-4 py-2 text-sm font-bold text-navy transition-opacity hover:opacity-85 sm:inline-flex"
           >
             <Phone className="h-4 w-4" />
             {FIRM.phone}
@@ -67,8 +67,8 @@ export function SiteHeader() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="font-serif text-2xl text-white hover:text-gold"
-                activeProps={{ className: "text-gold" }}
+                className="font-serif text-2xl text-white hover:text-white"
+                activeProps={{ className: "text-white" }}
                 activeOptions={{ exact: l.to === "/" }}
               >
                 {l.label}
@@ -76,7 +76,7 @@ export function SiteHeader() {
             ))}
             <a
               href={FIRM.phoneHref}
-              className="mt-4 inline-flex items-center justify-center gap-2 rounded-[999px] bg-gold px-5 py-3 font-bold text-navy"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-[999px] bg-white px-5 py-3 font-bold text-navy"
             >
               <Phone className="h-5 w-5" />
               {FIRM.phone}
