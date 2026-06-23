@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { FIRM } from "@/lib/firm";
+import ajkLogo from "@/assets/ajk-logo.png.asset.json";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -17,8 +18,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-navy">
       <div className="container-x flex h-16 items-center justify-between md:h-[72px]">
-        <Link to="/" className="font-serif text-xl font-semibold text-white md:text-2xl">
-          {FIRM.name}
+        <Link to="/" aria-label={FIRM.name}>
+          <img
+            src={ajkLogo.url}
+            alt={FIRM.name}
+            className="h-[38px] w-auto brightness-0 invert md:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
@@ -56,7 +61,7 @@ export function SiteHeader() {
       {open && (
         <div className="fixed inset-0 z-[60] flex flex-col bg-navy lg:hidden">
           <div className="container-x flex h-16 items-center justify-between">
-            <span className="font-serif text-xl font-semibold text-white">{FIRM.name}</span>
+            <img src={ajkLogo.url} alt={FIRM.name} className="h-[38px] w-auto brightness-0 invert" />
             <button aria-label="Close menu" className="text-white" onClick={() => setOpen(false)}>
               <X className="h-7 w-7" />
             </button>
