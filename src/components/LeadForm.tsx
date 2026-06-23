@@ -102,7 +102,7 @@ export function LeadForm({
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-4 flex w-full items-center justify-center gap-2 rounded-[999px] bg-gold py-3 font-bold text-navy transition-opacity hover:opacity-85 disabled:opacity-60"
+        className="mt-4 flex w-full items-center justify-center gap-2 rounded-[999px] bg-navy py-3 font-bold text-white transition-opacity hover:opacity-85 disabled:opacity-60"
       >
         {status === "loading" ? (
           <>
