@@ -61,7 +61,7 @@ export function SiteHeader() {
       {open && (
         <div className="fixed inset-0 z-[60] flex flex-col bg-navy lg:hidden">
           <div className="container-x flex h-16 items-center justify-between">
-            <span className="font-serif text-xl font-semibold text-white">{FIRM.name}</span>
+            <img src={ajkLogo.url} alt={FIRM.name} className="h-[38px] w-auto brightness-0 invert" />
             <button aria-label="Close menu" className="text-white" onClick={() => setOpen(false)}>
               <X className="h-7 w-7" />
             </button>
