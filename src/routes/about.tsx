@@ -8,13 +8,13 @@ import { FIRM } from "@/lib/firm";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About AJK Law Group | Abusharar, Jubran & Khatib | Anaheim California" },
+      { title: "About AJK Law Group | Abusharar, Jubran & Khatib | California" },
       {
         name: "description",
         content:
-          "Meet the attorneys of AJK Law Group (Abusharar & Associates) — fighting for Anaheim families in personal injury and immigration matters.",
+          "Meet the attorneys of AJK Law Group (Abusharar & Associates) — fighting for California families in personal injury and immigration matters.",
       },
-      { property: "og:title", content: "About AJK Law Group | Anaheim, California" },
+      { property: "og:title", content: "About AJK Law Group | California" },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -62,7 +62,7 @@ function About() {
             <h1 className="mt-3 font-serif text-4xl font-semibold text-white md:text-5xl">
               About {FIRM.name}
             </h1>
-            <p className="mt-4 text-lg text-white/75">Fighting for Anaheim families since day one.</p>
+            <p className="mt-4 text-lg text-white/75">Fighting for California families since day one.</p>
           </Reveal>
         </div>
       </section>

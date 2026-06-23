@@ -9,13 +9,13 @@ import { FIRM } from "@/lib/firm";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact AJK Law Group | Free Case Review | Anaheim CA" },
+      { title: "Contact AJK Law Group | Free Case Review | California" },
       {
         name: "description",
         content:
-          "Contact AJK Law Group in Anaheim, CA for a free case review. Call (714) 512-2122 or submit your case online. Available 24/7.",
+          "Contact AJK Law Group in California for a free case review. Call (714) 512-2122 or submit your case online. Available 24/7.",
       },
-      { property: "og:title", content: "Contact AJK Law Group | Anaheim, CA" },
+      { property: "og:title", content: "Contact AJK Law Group | California" },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -77,8 +77,8 @@ function Contact() {
             </div>
 
             <iframe
-              title="AJK Law Group location — Anaheim, CA"
-              src="https://www.google.com/maps?q=Anaheim,+CA&output=embed"
+              title="AJK Law Group service area — California"
+              src="https://www.google.com/maps?q=California&output=embed"
               className="h-64 w-full rounded-[4px] border border-border"
               loading="lazy"
             />
