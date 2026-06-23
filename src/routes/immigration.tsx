@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ShieldCheck, Users, GraduationCap, Scale, Briefcase, IdCard, Star } from "lucide-react";
+import { ShieldCheck, Users, GraduationCap, Scale, Briefcase, IdCard } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { Section } from "@/components/ui-kit";
