@@ -87,7 +87,7 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col gap-3 py-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
-          <p>© 2025 {FIRM.name} / {FIRM.alt}. All rights reserved.</p>
+          <p>© 2025 {FIRM.name}. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-white">Disclaimer</a>
             <a href="#" className="hover:text-white">Privacy Policy</a>
