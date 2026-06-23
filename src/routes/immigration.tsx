@@ -62,21 +62,11 @@ function Immigration() {
 
       <Section bg="bg-navy">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <div className="mb-4 flex justify-center gap-1 text-gold">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="h-5 w-5 fill-gold" />
-            ))}
-          </div>
           <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl">
-            Trusted by Families Across Southern California
+            Serving Families Across California
           </h2>
-          <p className="mt-5 text-lg text-white/75">
-            "Mr. Abusharar helped my family when we were terrified of deportation. He never gave up on
-            us and we are now safe. God bless this firm."
-          </p>
-          <p className="mt-3 font-semibold text-gold">— Ahmad K., Client</p>
           <p className="mt-8 inline-block rounded-[999px] border border-white/20 px-5 py-2 text-sm text-white/85">
-            Se Habla Español — We proudly serve Spanish-speaking clients.
+            Se Habla Español | نتحدث العربية — We proudly serve Spanish and Arabic-speaking clients.
           </p>
         </Reveal>
       </Section>
