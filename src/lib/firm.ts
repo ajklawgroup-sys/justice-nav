@@ -5,7 +5,7 @@ export const FIRM = {
   phoneHref: "tel:+17145122122",
   email: "ajklawgroup@ajkattorneys.com",
   emailHref: "mailto:ajklawgroup@ajkattorneys.com",
-  address: "Anaheim, California",
+  address: "California",
   tagline: "Justice for Every Client. Every Time.",
 };
 
