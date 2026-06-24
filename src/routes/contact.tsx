@@ -88,8 +88,8 @@ function Contact() {
             </div>
 
             <iframe
-              title="AJK Law Group service area — California"
-              src="https://www.google.com/maps?q=California&output=embed"
+              title="AJK Law Group — 1601 E Orangewood Ave, Suite 175, Anaheim, CA 92805"
+              src="https://www.google.com/maps?q=1601+E+Orangewood+Ave+Suite+175+Anaheim+CA+92805&output=embed"
               className="h-64 w-full rounded-[4px] border border-border"
               loading="lazy"
             />
