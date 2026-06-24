@@ -109,49 +109,7 @@ function Immigration() {
             Immigration consultations are paid. Personal injury case reviews are always free.
           </p>
         </Reveal>
-        <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
-          {[
-            {
-              icon: Building2,
-              title: "In-Person Consultation",
-              price: "$200",
-              desc: "Meet with our immigration attorneys at our office in Anaheim, CA. Bring your documents and get personalized legal guidance face to face.",
-              note: "📍 1601 E Orangewood Ave, Suite 175, Anaheim, CA 92805",
-              cta: "BOOK & PAY $200",
-            },
-            {
-              icon: Video,
-              title: "Virtual Consultation (Zoom)",
-              price: "$250",
-              desc: "Connect with our attorneys from anywhere in the United States via Zoom. Ideal for clients outside of California.",
-              note: "🌐 Available in all 50 states",
-              cta: "BOOK & PAY $250",
-            },
-          ].map((card) => {
-            const Icon = card.icon;
-            return (
-              <Reveal key={card.title}>
-                <div className="flex h-full flex-col rounded-[12px] border border-navy bg-white p-8 shadow-md">
-                  <Icon className="h-10 w-10 text-navy" />
-                  <h3 className="mt-4 font-serif text-xl font-semibold text-navy">{card.title}</h3>
-                  <p className="mt-2 text-4xl font-bold text-navy">{card.price}</p>
-                  <p className="mt-4 text-sm text-muted-foreground">{card.desc}</p>
-                  <p className="mt-4 text-sm font-medium text-navy">{card.note}</p>
-                  <div className="mt-auto pt-6">
-                    <a
-                      href="https://payments.filevine.com/pay?id=ODZmNTI1ZmEtMTIxMy00MzUwLWIyMTYtNjU3MTRlMWVhYzQ0"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-[999px] bg-navy px-6 py-3 text-sm font-bold text-white transition-opacity hover:opacity-85"
-                    >
-                      {card.cta}
-                    </a>
-                  </div>
-                </div>
-              </Reveal>
-            );
-          })}
-        </div>
+        <ImmigrationConsultation />
         <p className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-foreground">
           Consultation fees are non-refundable. Payment is processed securely through Filevine.
         </p>
