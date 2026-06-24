@@ -11,13 +11,13 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/immigration")({
   head: () => ({
     meta: [
-      { title: "Immigration Lawyers California | Asylum, DACA, Deportation Defense | AJK" },
+      { title: "Federal Immigration Attorneys | All 50 States | AJK Law Group" },
       {
         name: "description",
         content:
-          "AJK Law Group's California immigration attorneys handle asylum, family petitions, DACA, deportation defense, work visas and green cards. Se Habla Español.",
+          "Federal immigration attorneys representing clients before USCIS and in immigration courts and proceedings in all 50 states. Asylum, DACA, deportation defense, family petitions. Free consultation.",
       },
-      { property: "og:title", content: "Immigration Attorneys in California | AJK Law Group" },
+      { property: "og:title", content: "Federal Immigration Attorneys | All 50 States | AJK Law Group" },
       { property: "og:url", content: "/immigration" },
     ],
     links: [{ rel: "canonical", href: "/immigration" }],
