@@ -25,10 +25,11 @@ export const Route = createFileRoute("/about")({
 const attorneys = [
   {
     name: "Akram Abusharar, Esq.",
-    role: "Supervising Attorney",
+    role: "Immigration Law Specialist",
+    focus: "Practice Focus: Immigration Law Only",
     licensed: "Licensed in MI and MD",
     initials: "AA",
-    bio: "Leading AJK Law Group with a relentless commitment to justice for accident victims and immigrant families across California.",
+    bio: "Leading AJK Law Group with a relentless commitment to justice for immigrant families, handling immigration matters before USCIS and in immigration courts nationwide.",
   },
   {
     name: "Lewis Jubran, Esq.",
@@ -92,6 +93,9 @@ function About() {
               </div>
               <h3 className="mt-5 font-serif text-xl font-semibold text-navy">{a.name}</h3>
               <p className="mt-1 text-sm font-semibold text-navy">{a.role}</p>
+              {"focus" in a && a.focus ? (
+                <p className="text-xs text-muted-foreground">{a.focus}</p>
+              ) : null}
               <p className="text-xs text-muted-foreground">{a.licensed}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.bio}</p>
             </RevealItem>
