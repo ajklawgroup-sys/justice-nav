@@ -4,9 +4,11 @@ import { WEB3FORMS_KEY } from "@/lib/firm";
 
 export function LeadForm({
   title = "Get Your FREE Case Review",
+  submitLabel = "GET MY FREE CASE REVIEW",
   showBadge = true,
 }: {
   title?: string;
+  submitLabel?: string;
   showBadge?: boolean;
 }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -109,7 +111,7 @@ export function LeadForm({
             <Loader2 className="h-4 w-4 animate-spin" /> Sending...
           </>
         ) : (
-          "GET MY FREE CASE REVIEW"
+          submitLabel
         )}
       </button>
     </form>
