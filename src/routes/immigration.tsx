@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ShieldCheck, Users, GraduationCap, Scale, Briefcase, IdCard, Building2, Video } from "lucide-react";
+import { ShieldCheck, Users, GraduationCap, Scale, Briefcase, IdCard } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { Section } from "@/components/ui-kit";
@@ -7,6 +7,7 @@ import { Faq } from "@/components/Faq";
 import { LeadForm } from "@/components/LeadForm";
 import { CalendarEmbed } from "@/components/CalendarEmbed";
 import { Reveal } from "@/components/Reveal";
+import { ImmigrationConsultation } from "@/components/ImmigrationConsultation";
 
 export const Route = createFileRoute("/immigration")({
   head: () => ({
