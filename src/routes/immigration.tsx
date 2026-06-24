@@ -95,7 +95,7 @@ function Immigration() {
             </p>
           </Reveal>
           <Reveal>
-            <LeadForm />
+            <LeadForm title="Request a Consultation" submitLabel="SUBMIT INQUIRY" />>
           </Reveal>
         </div>
       </Section>
