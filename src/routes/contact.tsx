@@ -49,7 +49,18 @@ function Contact() {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 text-navy" />
-                  <span className="text-ink">{FIRM.address}</span>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=1601+E+Orangewood+Ave+Suite+175+Anaheim+CA+92805"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-ink hover:text-navy"
+                  >
+                    {FIRM.name}
+                    <br />
+                    1601 E Orangewood Ave, Suite 175
+                    <br />
+                    Anaheim, CA 92805
+                  </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 text-navy" />
@@ -77,8 +88,8 @@ function Contact() {
             </div>
 
             <iframe
-              title="AJK Law Group service area — California"
-              src="https://www.google.com/maps?q=California&output=embed"
+              title="AJK Law Group — 1601 E Orangewood Ave, Suite 175, Anaheim, CA 92805"
+              src="https://www.google.com/maps?q=1601+E+Orangewood+Ave+Suite+175+Anaheim+CA+92805&output=embed"
               className="h-64 w-full rounded-[4px] border border-border"
               loading="lazy"
             />
