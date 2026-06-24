@@ -70,7 +70,19 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wide text-white">Contact</h4>
           <ul className="mt-4 space-y-2 text-sm">
-            <li>{FIRM.address}</li>
+            <li className="font-semibold text-white">{FIRM.name}</li>
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=1601+E+Orangewood+Ave+Suite+175+Anaheim+CA+92805"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                1601 E Orangewood Ave, Suite 175
+                <br />
+                Anaheim, CA 92805
+              </a>
+            </li>
             <li>
               <a href={FIRM.phoneHref} className="hover:text-white">
                 {FIRM.phone}
@@ -82,7 +94,7 @@ export function SiteFooter() {
               </a>
             </li>
             <li className="text-white/60">Mon–Fri 9am–6pm</li>
-            <li className="text-white/60">Sat by appt</li>
+            <li className="text-white/60">Sat by appointment</li>
           </ul>
         </div>
       </div>
