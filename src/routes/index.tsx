@@ -139,8 +139,8 @@ function Home() {
             <FileText className="h-10 w-10 text-navy" />
             <h3 className="mt-4 font-serif text-2xl font-semibold text-navy">Immigration Law</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              From asylum cases to family petitions, DACA renewals to deportation defense — {FIRM.name}{" "}
-              navigates complex immigration matters with compassion and aggressive advocacy.
+              From asylum to deportation defense, DACA to family petitions — {FIRM.name} represents
+              clients before USCIS and in immigration courts and proceedings in all 50 states.
             </p>
             <ul className="mt-5 grid grid-cols-2 gap-2 text-sm text-ink">
               {immList.map((x) => (
