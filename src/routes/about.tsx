@@ -93,6 +93,9 @@ function About() {
               </div>
               <h3 className="mt-5 font-serif text-xl font-semibold text-navy">{a.name}</h3>
               <p className="mt-1 text-sm font-semibold text-navy">{a.role}</p>
+              {"focus" in a && a.focus ? (
+                <p className="text-xs text-muted-foreground">{a.focus}</p>
+              ) : null}
               <p className="text-xs text-muted-foreground">{a.licensed}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.bio}</p>
             </RevealItem>
