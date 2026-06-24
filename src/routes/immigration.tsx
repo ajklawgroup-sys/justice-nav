@@ -47,8 +47,9 @@ function Immigration() {
     <>
       <PageHero
         eyebrow="Immigration"
-        title="Immigration Attorneys in California"
-        subtitle="From asylum to green cards, we navigate complex immigration matters with compassion and aggressive advocacy."
+        title="Federal Immigration Attorneys Serving All 50 States"
+        badge="🇺🇸 Federal Practice — We Accept Cases from All 50 States"
+        subtitle="Immigration law is federal — no matter where you are in the United States, AJK Law Group can represent you. We handle cases before USCIS and in immigration courts and proceedings nationwide for clients in all 50 states."
       />
 
       <Section bg="bg-background">
@@ -63,7 +64,7 @@ function Immigration() {
       <Section bg="bg-navy">
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl">
-            Serving Families Across California
+            Serving Families Nationwide
           </h2>
           <p className="mt-8 inline-block rounded-[999px] border border-white/20 px-5 py-2 text-sm text-white/85">
             Se Habla Español | نتحدث العربية — We proudly serve Spanish and Arabic-speaking clients.
