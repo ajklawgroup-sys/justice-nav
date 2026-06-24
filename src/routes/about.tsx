@@ -25,10 +25,11 @@ export const Route = createFileRoute("/about")({
 const attorneys = [
   {
     name: "Akram Abusharar, Esq.",
-    role: "Supervising Attorney",
+    role: "Immigration Law Specialist",
+    focus: "Practice Focus: Immigration Law Only",
     licensed: "Licensed in MI and MD",
     initials: "AA",
-    bio: "Leading AJK Law Group with a relentless commitment to justice for accident victims and immigrant families across California.",
+    bio: "Leading AJK Law Group with a relentless commitment to justice for immigrant families, handling immigration matters before USCIS and in immigration courts nationwide.",
   },
   {
     name: "Lewis Jubran, Esq.",
