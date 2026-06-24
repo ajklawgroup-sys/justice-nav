@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, MapPin } from "lucide-react";
 import { FIRM } from "@/lib/firm";
-import ajkLogo from "@/assets/ajk-logo.png.asset.json";
 
 const columns = [
   {
@@ -33,9 +32,11 @@ export function SiteFooter() {
     <footer className="bg-ink text-white/80">
       <div className="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <Link to="/" aria-label={FIRM.name}>
-            <img src={ajkLogo.url} alt={FIRM.name} className="h-12 w-auto brightness-0 invert" />
-          </Link>
+          <a href="/">
+            <div style={{ background: "white", borderRadius: 4, padding: "4px 10px", display: "inline-block" }}>
+              <img src="/ajk_logo.PNG" alt="AJK Law Group" style={{ height: 40, width: "auto", display: "block" }} />
+            </div>
+          </a>
           <p className="mt-3 max-w-xs text-sm text-white/60">{FIRM.tagline}</p>
           <div className="mt-5 flex gap-3">
             {[Facebook, Instagram, Linkedin, MapPin].map((Icon, i) => (
