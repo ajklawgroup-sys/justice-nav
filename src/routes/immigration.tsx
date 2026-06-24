@@ -39,7 +39,7 @@ const faqs = [
   { q: "Can DACA still be renewed?", a: "Yes, under current policy. Contact us for the latest updates and to file your renewal on time." },
   { q: "What happens if I get a deportation notice?", a: "Call us immediately. Time is critical and acting quickly can protect your rights." },
   { q: "How long does a green card take?", a: "It varies — typically 1 to 10+ years depending on the category and your country of origin." },
-  { q: "Do you handle immigration court cases?", a: "Yes. We represent clients in all immigration court proceedings." },
+  { q: "Do you handle immigration court cases?", a: "Yes. Because immigration law is federal, we represent clients before USCIS and in immigration courts and proceedings across all 50 states." },
 ];
 
 function Immigration() {
