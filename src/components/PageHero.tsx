@@ -7,10 +7,12 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
+  badge,
 }: {
   eyebrow?: string;
   title: ReactNode;
   subtitle: string;
+  badge?: string;
 }) {
   return (
     <section className="bg-navy">
@@ -20,6 +22,11 @@ export function PageHero({
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
             {title}
           </h1>
+          {badge && (
+            <span className="mt-4 inline-block rounded-[999px] border border-white bg-white px-4 py-2 text-sm font-semibold text-navy">
+              {badge}
+            </span>
+          )}
           <p className="mt-5 max-w-xl text-lg text-white/75">{subtitle}</p>
         </Reveal>
         <Reveal>
