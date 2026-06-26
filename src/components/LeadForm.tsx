@@ -6,10 +6,14 @@ export function LeadForm({
   title = "Get Your FREE Case Review",
   submitLabel = "GET MY FREE CASE REVIEW",
   showBadge = true,
+  subject = "New Case Review — AJK Law Group",
+  hideInjured = false,
 }: {
   title?: string;
   submitLabel?: string;
   showBadge?: boolean;
+  subject?: string;
+  hideInjured?: boolean;
 }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
