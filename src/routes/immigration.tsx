@@ -56,6 +56,15 @@ function Immigration() {
           submitLabel: "SUBMIT INQUIRY",
           hideInjured: true,
           subject: "Immigration Consultation Inquiry — AJK Law Group",
+          helpOptions: [
+            "Asylum",
+            "Family Petition",
+            "DACA",
+            "Deportation Defense",
+            "Work Visa",
+            "Green Card",
+            "Other",
+          ],
         }}
       />
 
