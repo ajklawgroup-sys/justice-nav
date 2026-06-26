@@ -86,8 +86,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "AJK Law Group — California personal injury & immigration attorneys.",
       },
       { name: "author", content: "AJK Law Group" },
-      { property: "og:title", content: "AJK Law Group | Personal Injury & Immigration Lawyers" },
-      { name: "twitter:title", content: "AJK Law Group | Personal Injury & Immigration Lawyers" },
+      { property: "og:title", content: "Personal Injury & Immigration Lawyers | AJK Law Group | California" },
+      { name: "twitter:title", content: "Personal Injury & Immigration Lawyers | AJK Law Group | California" },
       {
         property: "og:description",
         content: "Justice for Every Client. Every Time. Free confidential case review.",
@@ -95,6 +95,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "AJK Law Group" },
       { name: "twitter:card", content: "summary" },
+      { name: "description", content: "Justice Navigator is a legal services website for AJK Law Group, specializing in personal injury and immigration law." },
+      { property: "og:description", content: "Justice Navigator is a legal services website for AJK Law Group, specializing in personal injury and immigration law." },
+      { name: "twitter:description", content: "Justice Navigator is a legal services website for AJK Law Group, specializing in personal injury and immigration law." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/56be5a56-e4e0-4652-90ee-aa45aa2651d4/id-preview-7c1b1a19--8e1bb200-5b32-4281-818c-1de487ade189.lovable.app-1782504708090.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/56be5a56-e4e0-4652-90ee-aa45aa2651d4/id-preview-7c1b1a19--8e1bb200-5b32-4281-818c-1de487ade189.lovable.app-1782504708090.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
