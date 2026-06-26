@@ -121,17 +121,6 @@ function Immigration() {
           Consultation fees are non-refundable. Payment is processed securely through Filevine.
         </p>
       </Section>
-
-      <Section bg="bg-card">
-        <Reveal className="text-center">
-          <h2 className="font-serif text-3xl font-semibold text-navy md:text-4xl">
-            Schedule a Consultation
-          </h2>
-        </Reveal>
-        <div className="mt-10">
-          <CalendarEmbed />
-        </div>
-      </Section>
     </>
   );
 }
