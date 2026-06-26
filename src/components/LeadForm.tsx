@@ -8,12 +8,14 @@ export function LeadForm({
   showBadge = true,
   subject = "New Case Review — AJK Law Group",
   hideInjured = false,
+  helpOptions = ["Personal Injury", "Immigration", "Both", "Other"],
 }: {
   title?: string;
   submitLabel?: string;
   showBadge?: boolean;
   subject?: string;
   hideInjured?: boolean;
+  helpOptions?: string[];
 }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -75,10 +77,9 @@ export function LeadForm({
           <option value="" disabled>
             How can we help?
           </option>
-          <option>Personal Injury</option>
-          <option>Immigration</option>
-          <option>Both</option>
-          <option>Other</option>
+          {helpOptions.map((opt) => (
+            <option key={opt}>{opt}</option>
+          ))}
         </select>
         {!hideInjured && (
           <select name="were_you_injured" className={inputCls} defaultValue="">
