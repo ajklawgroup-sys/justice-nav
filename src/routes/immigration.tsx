@@ -5,7 +5,7 @@ import { ServiceGrid } from "@/components/ServiceGrid";
 import { Section } from "@/components/ui-kit";
 import { Faq } from "@/components/Faq";
 import { LeadForm } from "@/components/LeadForm";
-import { CalendarEmbed } from "@/components/CalendarEmbed";
+
 import { Reveal } from "@/components/Reveal";
 import { ImmigrationConsultation } from "@/components/ImmigrationConsultation";
 
