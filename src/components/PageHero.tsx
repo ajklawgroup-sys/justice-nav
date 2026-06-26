@@ -8,11 +8,13 @@ export function PageHero({
   title,
   subtitle,
   badge,
+  formProps,
 }: {
   eyebrow?: string;
   title: ReactNode;
   subtitle: string;
   badge?: string;
+  formProps?: React.ComponentProps<typeof LeadForm>;
 }) {
   return (
     <section className="bg-navy">
