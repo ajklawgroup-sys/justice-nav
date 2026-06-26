@@ -8,12 +8,14 @@ export function LeadForm({
   showBadge = true,
   subject = "New Case Review — AJK Law Group",
   hideInjured = false,
+  helpOptions = ["Personal Injury", "Immigration", "Both", "Other"],
 }: {
   title?: string;
   submitLabel?: string;
   showBadge?: boolean;
   subject?: string;
   hideInjured?: boolean;
+  helpOptions?: string[];
 }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
