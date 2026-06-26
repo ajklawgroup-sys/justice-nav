@@ -5,7 +5,7 @@ import { ServiceGrid } from "@/components/ServiceGrid";
 import { Section } from "@/components/ui-kit";
 import { Faq } from "@/components/Faq";
 import { LeadForm } from "@/components/LeadForm";
-import { CalendarEmbed } from "@/components/CalendarEmbed";
+
 import { Reveal } from "@/components/Reveal";
 import { ImmigrationConsultation } from "@/components/ImmigrationConsultation";
 
@@ -51,6 +51,12 @@ function Immigration() {
         title="Federal Immigration Attorneys Serving All 50 States"
         badge="🇺🇸 Federal Practice — We Accept Cases from All 50 States"
         subtitle="Immigration law is federal — no matter where you are in the United States, AJK Law Group can represent you. We handle cases before USCIS and in immigration courts and proceedings nationwide for clients in all 50 states."
+        formProps={{
+          title: "Request a Consultation",
+          submitLabel: "SUBMIT INQUIRY",
+          hideInjured: true,
+          subject: "Immigration Consultation Inquiry — AJK Law Group",
+        }}
       />
 
       <Section bg="bg-background">
@@ -114,17 +120,6 @@ function Immigration() {
         <p className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-foreground">
           Consultation fees are non-refundable. Payment is processed securely through Filevine.
         </p>
-      </Section>
-
-      <Section bg="bg-card">
-        <Reveal className="text-center">
-          <h2 className="font-serif text-3xl font-semibold text-navy md:text-4xl">
-            Schedule a Consultation
-          </h2>
-        </Reveal>
-        <div className="mt-10">
-          <CalendarEmbed />
-        </div>
       </Section>
     </>
   );

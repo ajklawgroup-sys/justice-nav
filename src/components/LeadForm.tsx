@@ -6,10 +6,14 @@ export function LeadForm({
   title = "Get Your FREE Case Review",
   submitLabel = "GET MY FREE CASE REVIEW",
   showBadge = true,
+  subject = "New Case Review — AJK Law Group",
+  hideInjured = false,
 }: {
   title?: string;
   submitLabel?: string;
   showBadge?: boolean;
+  subject?: string;
+  hideInjured?: boolean;
 }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -47,7 +51,7 @@ export function LeadForm({
   return (
     <form onSubmit={handleSubmit} className="rounded-[4px] border border-border bg-card p-6 shadow-sm">
       <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
-      <input type="hidden" name="subject" value="New Case Review — AJK Law Group" />
+      <input type="hidden" name="subject" value={subject} />
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
       <div className="flex items-center justify-between gap-2">
@@ -76,14 +80,16 @@ export function LeadForm({
           <option>Both</option>
           <option>Other</option>
         </select>
-        <select name="were_you_injured" className={inputCls} defaultValue="">
-          <option value="" disabled>
-            Were you injured?
-          </option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>N/A</option>
-        </select>
+        {!hideInjured && (
+          <select name="were_you_injured" className={inputCls} defaultValue="">
+            <option value="" disabled>
+              Were you injured?
+            </option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>N/A</option>
+          </select>
+        )}
         <textarea
           name="message"
           rows={3}

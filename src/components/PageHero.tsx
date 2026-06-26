@@ -8,11 +8,13 @@ export function PageHero({
   title,
   subtitle,
   badge,
+  formProps,
 }: {
   eyebrow?: string;
   title: ReactNode;
   subtitle: string;
   badge?: string;
+  formProps?: React.ComponentProps<typeof LeadForm>;
 }) {
   return (
     <section className="bg-navy">
@@ -30,7 +32,7 @@ export function PageHero({
           <p className="mt-5 max-w-xl text-lg text-white/75">{subtitle}</p>
         </Reveal>
         <Reveal>
-          <LeadForm />
+          <LeadForm {...formProps} />
         </Reveal>
       </div>
     </section>
