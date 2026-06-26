@@ -51,7 +51,7 @@ export function LeadForm({
   return (
     <form onSubmit={handleSubmit} className="rounded-[4px] border border-border bg-card p-6 shadow-sm">
       <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
-      <input type="hidden" name="subject" value="New Case Review — AJK Law Group" />
+      <input type="hidden" name="subject" value={subject} />
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
       <div className="flex items-center justify-between gap-2">
