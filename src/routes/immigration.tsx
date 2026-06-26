@@ -4,7 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { Section } from "@/components/ui-kit";
 import { Faq } from "@/components/Faq";
-import { LeadForm } from "@/components/LeadForm";
+
 
 import { Reveal } from "@/components/Reveal";
 import { ImmigrationConsultation } from "@/components/ImmigrationConsultation";
