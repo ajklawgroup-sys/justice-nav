@@ -77,10 +77,9 @@ export function LeadForm({
           <option value="" disabled>
             How can we help?
           </option>
-          <option>Personal Injury</option>
-          <option>Immigration</option>
-          <option>Both</option>
-          <option>Other</option>
+          {helpOptions.map((opt) => (
+            <option key={opt}>{opt}</option>
+          ))}
         </select>
         {!hideInjured && (
           <select name="were_you_injured" className={inputCls} defaultValue="">
