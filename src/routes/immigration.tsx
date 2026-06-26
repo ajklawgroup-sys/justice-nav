@@ -37,9 +37,9 @@ const services = [
 
 const faqs = [
   { q: "What is asylum?", a: "Asylum is protection for those who fear persecution in their home country based on race, religion, nationality, political opinion, or membership in a particular social group." },
-  { q: "Can DACA still be renewed?", a: "Yes, under current policy. Contact us for the latest updates and to file your renewal on time." },
-  { q: "What happens if I get a deportation notice?", a: "Call us immediately. Time is critical and acting quickly can protect your rights." },
-  { q: "How long does a green card take?", a: "It varies — typically 1 to 10+ years depending on the category and your country of origin." },
+  { q: "Can DACA still be renewed?", a: "Yes, under current policy DACA renewals are being accepted. Contact us immediately for current status and to begin your renewal." },
+  { q: "What happens if I get a deportation notice?", a: "Call us immediately. Time is critical. We will review your case and advise you on all available options including motions to reopen and emergency stays of removal." },
+  { q: "How long does a green card take?", a: "It varies by category, typically 1 to 10 or more years depending on your country of origin and visa category." },
   { q: "Do you handle immigration court cases?", a: "Yes. Because immigration law is federal, we represent clients before USCIS and in immigration courts and proceedings across all 50 states." },
 ];
 
