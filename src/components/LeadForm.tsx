@@ -80,14 +80,16 @@ export function LeadForm({
           <option>Both</option>
           <option>Other</option>
         </select>
-        <select name="were_you_injured" className={inputCls} defaultValue="">
-          <option value="" disabled>
-            Were you injured?
-          </option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>N/A</option>
-        </select>
+        {!hideInjured && (
+          <select name="were_you_injured" className={inputCls} defaultValue="">
+            <option value="" disabled>
+              Were you injured?
+            </option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>N/A</option>
+          </select>
+        )}
         <textarea
           name="message"
           rows={3}
