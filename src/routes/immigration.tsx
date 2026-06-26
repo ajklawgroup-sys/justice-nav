@@ -51,6 +51,12 @@ function Immigration() {
         title="Federal Immigration Attorneys Serving All 50 States"
         badge="🇺🇸 Federal Practice — We Accept Cases from All 50 States"
         subtitle="Immigration law is federal — no matter where you are in the United States, AJK Law Group can represent you. We handle cases before USCIS and in immigration courts and proceedings nationwide for clients in all 50 states."
+        formProps={{
+          title: "Request a Consultation",
+          submitLabel: "SUBMIT INQUIRY",
+          hideInjured: true,
+          subject: "Immigration Consultation Inquiry — AJK Law Group",
+        }}
       />
 
       <Section bg="bg-background">
