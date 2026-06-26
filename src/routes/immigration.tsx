@@ -99,22 +99,6 @@ function Immigration() {
         </div>
       </Section>
 
-      <Section bg="bg-soft">
-        <div className="grid items-start gap-10 lg:grid-cols-2">
-          <Reveal>
-            <h2 className="font-serif text-3xl font-semibold text-navy md:text-4xl">
-              Request a Confidential Consultation
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Your information is safe with us. Tell us about your situation and we will respond
-              within 24 hours.
-            </p>
-          </Reveal>
-          <Reveal>
-            <LeadForm title="Request a Consultation" submitLabel="SUBMIT INQUIRY" />
-          </Reveal>
-        </div>
-      </Section>
 
       <Section bg="bg-soft" className="!bg-[#f2efe6]">
         <Reveal className="mx-auto max-w-2xl text-center">
