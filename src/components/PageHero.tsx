@@ -32,7 +32,7 @@ export function PageHero({
           <p className="mt-5 max-w-xl text-lg text-white/75">{subtitle}</p>
         </Reveal>
         <Reveal>
-          <LeadForm />
+          <LeadForm {...formProps} />
         </Reveal>
       </div>
     </section>
