@@ -101,7 +101,7 @@ function Home() {
           </Reveal>
           <Reveal>
             <div id="lead">
-              <LeadForm />
+              <LeadForm hideInjured />
             </div>
           </Reveal>
         </div>
