@@ -55,7 +55,7 @@ export function SiteHeader() {
       {open && (
         <div className="fixed inset-0 z-[60] flex flex-col bg-navy lg:hidden">
           <div className="container-x flex h-[72px] items-center justify-between">
-            <LogoLockup markClassName="h-[44px]" textClassName="text-base" />
+            <LogoLockup markClassName="h-[44px]" />
             <button aria-label="Close menu" className="text-white" onClick={() => setOpen(false)}>
               <X className="h-7 w-7" />
             </button>

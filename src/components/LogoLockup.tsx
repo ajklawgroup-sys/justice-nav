@@ -3,23 +3,26 @@ type LogoLockupProps = {
   textClassName?: string;
 };
 
+const DEFAULT_TEXT =
+  "hidden text-[13px] leading-none sm:block sm:text-sm md:text-base lg:text-lg xl:text-xl";
+
 export function LogoLockup({
   markClassName = "h-[52px] md:h-[72px]",
-  textClassName = "text-lg md:text-2xl",
+  textClassName = DEFAULT_TEXT,
 }: LogoLockupProps) {
   return (
-    <a href="/" className="flex items-center gap-3">
+    <a href="/" className="flex items-center gap-2 md:gap-3">
       <div className="inline-block rounded-[4px] bg-white px-2 py-1">
         <img
           src="/ajk_mark.PNG"
-          alt="AJK Law Group"
+          alt="Abusharar Jubran Khatib, APC"
           className={`block w-auto ${markClassName}`}
         />
       </div>
       <span
-        className={`font-serif font-semibold uppercase leading-none tracking-[0.12em] text-white ${textClassName}`}
+        className={`font-serif font-semibold tracking-[0.08em] text-white ${textClassName}`}
       >
-        AJK Law Group
+        Abusharar Jubran Khatib, APC
       </span>
     </a>
   );
