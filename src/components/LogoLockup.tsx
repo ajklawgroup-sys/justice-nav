@@ -4,7 +4,7 @@ type LogoLockupProps = {
 };
 
 const DEFAULT_TEXT =
-  "hidden text-[13px] leading-none sm:block sm:text-sm md:text-base lg:text-lg xl:text-xl";
+  "hidden text-[13px] leading-none xl:block xl:text-lg 2xl:text-xl";
 
 export function LogoLockup({
   markClassName = "h-[52px] md:h-[72px]",
