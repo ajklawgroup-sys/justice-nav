@@ -184,11 +184,7 @@ function TermsOfService() {
               {messaging.map((m) => (
                 <div key={m.sub}>
                   <h3 className="text-sm font-semibold text-navy">{m.sub}</h3>
-                  {m.body.map((p, i) => (
-                    <p key={i} className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {p}
-                    </p>
-                  ))}
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{m.body}</p>
                 </div>
               ))}
             </div>
