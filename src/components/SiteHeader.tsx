@@ -22,7 +22,7 @@ export function SiteHeader() {
             <img
               src="/ajk_logo.PNG"
               alt="AJK Law Group"
-              style={{ height: 78, width: "auto", display: "block" }}
+              className="block h-[52px] w-auto md:h-[78px]"
             />
           </div>
         </a>
