@@ -16,13 +16,13 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 bg-navy">
-      <div className="container-x flex h-16 items-center justify-between md:h-[72px]">
+      <div className="container-x flex h-[72px] items-center justify-between md:h-[96px]">
         <a href="/">
           <div style={{ background: "white", borderRadius: 4, padding: "4px 10px", display: "inline-block" }}>
             <img
               src="/ajk_logo.PNG"
               alt="AJK Law Group"
-              style={{ height: 56, width: "auto", display: "block" }}
+              style={{ height: 78, width: "auto", display: "block" }}
             />
           </div>
         </a>
@@ -61,10 +61,10 @@ export function SiteHeader() {
 
       {open && (
         <div className="fixed inset-0 z-[60] flex flex-col bg-navy lg:hidden">
-          <div className="container-x flex h-16 items-center justify-between">
+          <div className="container-x flex h-[72px] items-center justify-between">
             <a href="/">
               <div style={{ background: "white", borderRadius: 4, padding: "4px 10px", display: "inline-block" }}>
-                <img src="/ajk_logo.PNG" alt="AJK Law Group" style={{ height: 44, width: "auto", display: "block" }} />
+                <img src="/ajk_logo.PNG" alt="AJK Law Group" style={{ height: 56, width: "auto", display: "block" }} />
               </div>
             </a>
             <button aria-label="Close menu" className="text-white" onClick={() => setOpen(false)}>
