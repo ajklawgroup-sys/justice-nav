@@ -29,7 +29,6 @@ const attorneys = [
     focus: "Practice Focus: Immigration Law Only",
     licensed: "Licensed in MI and MD",
     initials: "AA",
-    bio: "Leading AJK Law Group with a relentless commitment to justice for immigrant families, handling immigration matters before USCIS and in immigration courts nationwide.",
   },
   {
     name: "Lewis Jubran, Esq.",
@@ -37,7 +36,6 @@ const attorneys = [
     focus: "Practice Focus: Personal Injury and Immigration Law",
     licensed: "Licensed in CA and D.C.",
     initials: "LJ",
-    bio: "A dedicated advocate who fights tirelessly to protect clients' rights in both personal injury and immigration matters.",
   },
   {
     name: "Salah Khatib, Esq.",
@@ -45,7 +43,6 @@ const attorneys = [
     focus: "Practice Focus: Personal Injury and Immigration Law",
     licensed: "Licensed in CA",
     initials: "SK",
-    bio: "Bringing compassion and tenacity to every case, ensuring each client is treated like family.",
   },
 ];
 
@@ -99,7 +96,6 @@ function About() {
                 <p className="text-xs text-muted-foreground">{a.focus}</p>
               ) : null}
               <p className="text-xs text-muted-foreground">{a.licensed}</p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.bio}</p>
             </RevealItem>
           ))}
         </RevealGroup>
