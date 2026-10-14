@@ -49,60 +49,56 @@ const sections: { heading: string; body: ReactNode[] }[] = [
   },
 ];
 
-const messaging: { sub: string; body: ReactNode[] }[] = [
+const messaging: { sub: string; body: ReactNode }[] = [
   {
     sub: "Client Intake & Appointments",
-    body: [
+    body:
       "Text messages include scheduling an initial call, appointment reminders, intake follow-ups, and secure links for e-signing documents.",
-    ],
   },
   {
     sub: "Opt-Out",
-    body: [
+    body:
       'You can cancel the SMS service at any time. Just text "STOP" to ' +
-        FIRM.phone +
-        '. After you send the SMS message "STOP" to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending SMS messages to you again.',
-    ],
+      FIRM.phone +
+      '. After you send the SMS message "STOP" to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending SMS messages to you again.',
   },
   {
     sub: "Support",
-    body: [
-      "If you are experiencing issues with the messaging program you can reply with the keyword HELP for more assistance, or you can get help directly at ",
-      <span key="support">
+    body: (
+      <>
+        If you are experiencing issues with the messaging program you can reply with the keyword
+        HELP for more assistance, or you can get help directly at{" "}
         <a href={FIRM.emailHref} className="underline hover:text-navy">
           {FIRM.email}
-        </a>
-        {" or "}
+        </a>{" "}
+        or{" "}
         <a href={FIRM.phoneHref} className="underline hover:text-navy">
           {FIRM.phone}
         </a>
         .
-      </span>,
-    ],
+      </>
+    ),
   },
   {
     sub: "Delivery",
-    body: ["Carriers are not liable for delayed or undelivered messages."],
+    body: "Carriers are not liable for delayed or undelivered messages.",
   },
   {
     sub: "Rates & Frequency",
-    body: [
+    body:
       "Message and data rates may apply for any messages sent to you from us and to us from you. Message frequency varies. The number and timing of messages depend on your inquiry and appointment schedule. If you have any questions about your text plan or data plan, it is best to contact your wireless provider.",
-    ],
   },
   {
     sub: "Privacy",
-    body: [
-      "If you have any questions regarding privacy, please read our privacy policy: ",
-      <Link
-        key="pp"
-        to="/privacy-policy"
-        className="underline hover:text-navy"
-      >
-        AJK Law Group Privacy Policy
-      </Link>
-      ".",
-    ],
+    body: (
+      <>
+        If you have any questions regarding privacy, please read our privacy policy:{" "}
+        <Link to="/privacy-policy" className="underline hover:text-navy">
+          AJK Law Group Privacy Policy
+        </Link>
+        .
+      </>
+    ),
   },
 ];
 
