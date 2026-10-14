@@ -56,6 +56,7 @@ function PersonalInjury() {
         eyebrow="Personal Injury"
         title="Personal Injury Attorneys in California"
         subtitle="Hurt through no fault of your own? We handle everything while you focus on healing — and you pay nothing unless we win."
+        formProps={{ hideInjured: true }}
       />
 
       <Section bg="bg-background">
@@ -107,7 +108,7 @@ function PersonalInjury() {
             </p>
           </Reveal>
           <Reveal>
-            <LeadForm />
+            <LeadForm hideInjured />
           </Reveal>
         </div>
       </Section>

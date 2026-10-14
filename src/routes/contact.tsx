@@ -42,6 +42,7 @@ function Contact() {
         <div className="grid gap-10 lg:grid-cols-2">
           <Reveal>
             <LeadForm
+              hideInjured
               title="Send Us a Message"
               consentText={
                 <>

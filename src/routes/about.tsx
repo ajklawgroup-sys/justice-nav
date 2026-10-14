@@ -136,7 +136,7 @@ function About() {
             </p>
           </Reveal>
           <Reveal>
-            <LeadForm />
+            <LeadForm hideInjured />
           </Reveal>
         </div>
       </Section>
