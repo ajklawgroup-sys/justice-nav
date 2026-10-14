@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Section, Eyebrow } from "@/components/ui-kit";
 import { LeadForm } from "@/components/LeadForm";
@@ -41,7 +41,24 @@ function Contact() {
       <Section bg="bg-background">
         <div className="grid gap-10 lg:grid-cols-2">
           <Reveal>
-            <LeadForm title="Send Us a Message" />
+            <LeadForm
+              title="Send Us a Message"
+              consentText={
+                <>
+                  By checking the box, you are expressly consenting to receive customer care SMS
+                  communication from AJK LAW GROUP. Message and data rates may apply. Message
+                  frequency varies. To opt-out, reply STOP. For help, reply HELP. View our{" "}
+                  <Link to="/privacy-policy" className="underline hover:text-navy">
+                    Privacy Policy
+                  </Link>{" "}
+                  and{" "}
+                  <Link to="/terms-of-service" className="underline hover:text-navy">
+                    Terms of Service
+                  </Link>
+                  .
+                </>
+              }
+            />
           </Reveal>
 
           <Reveal className="space-y-5">

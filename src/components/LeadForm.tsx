@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { WEB3FORMS_KEY } from "@/lib/firm";
 
@@ -9,6 +9,7 @@ export function LeadForm({
   subject = "New Case Review — AJK Law Group",
   hideInjured = false,
   helpOptions = ["Personal Injury", "Immigration", "Both", "Other"],
+  consentText,
 }: {
   title?: string;
   submitLabel?: string;
@@ -16,6 +17,7 @@ export function LeadForm({
   subject?: string;
   hideInjured?: boolean;
   helpOptions?: string[];
+  consentText?: ReactNode;
 }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -100,8 +102,10 @@ export function LeadForm({
       </div>
 
       <label className="mt-3 flex items-start gap-2 text-xs text-muted-foreground">
-        <input type="checkbox" name="consent" defaultChecked className="mt-0.5" />
-        <span>I consent to be contacted by AJK Law Group regarding my inquiry.</span>
+        <input type="checkbox" name="consent" defaultChecked={!consentText} className="mt-0.5" />
+        <span>
+          {consentText ?? "I consent to be contacted by AJK Law Group regarding my inquiry."}
+        </span>
       </label>
 
       {status === "error" && (

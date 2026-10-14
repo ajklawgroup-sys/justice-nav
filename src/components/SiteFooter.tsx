@@ -101,7 +101,8 @@ export function SiteFooter() {
           <p>© 2025 {FIRM.name}. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-white">Disclaimer</a>
-            <a href="#" className="hover:text-white">Privacy Policy</a>
+            <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link>
             <Link to="/contact" className="hover:text-white">Sitemap</Link>
           </div>
         </div>
