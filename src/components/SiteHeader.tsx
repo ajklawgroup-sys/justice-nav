@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { FIRM } from "@/lib/firm";
+import { LogoLockup } from "@/components/LogoLockup";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -17,15 +18,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-navy">
       <div className="container-x flex h-[72px] items-center justify-between md:h-[96px]">
-        <a href="/">
-          <div style={{ background: "white", borderRadius: 4, padding: "4px 10px", display: "inline-block" }}>
-            <img
-              src="/ajk_logo.PNG"
-              alt="AJK Law Group"
-              className="block h-[52px] w-auto md:h-[78px]"
-            />
-          </div>
-        </a>
+        <LogoLockup />
 
         <nav className="hidden items-center gap-7 lg:flex">
           {navLinks.map((l) => (
@@ -62,11 +55,7 @@ export function SiteHeader() {
       {open && (
         <div className="fixed inset-0 z-[60] flex flex-col bg-navy lg:hidden">
           <div className="container-x flex h-[72px] items-center justify-between">
-            <a href="/">
-              <div style={{ background: "white", borderRadius: 4, padding: "4px 10px", display: "inline-block" }}>
-                <img src="/ajk_logo.PNG" alt="AJK Law Group" style={{ height: 56, width: "auto", display: "block" }} />
-              </div>
-            </a>
+            <LogoLockup markClassName="h-[44px]" textClassName="text-base" />
             <button aria-label="Close menu" className="text-white" onClick={() => setOpen(false)}>
               <X className="h-7 w-7" />
             </button>
