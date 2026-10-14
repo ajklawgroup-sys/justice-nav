@@ -32,11 +32,7 @@ export function SiteFooter() {
     <footer className="bg-ink text-white/80">
       <div className="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <a href="/">
-            <div style={{ background: "white", borderRadius: 4, padding: "4px 10px", display: "inline-block" }}>
-              <img src="/ajk_logo.PNG" alt="AJK Law Group" style={{ height: 40, width: "auto", display: "block" }} />
-            </div>
-          </a>
+          <LogoLockup markClassName="h-[38px]" textClassName="text-base" />
           <p className="mt-3 max-w-xs text-sm text-white/60">{FIRM.tagline}</p>
           <div className="mt-5 flex gap-3">
             {[Facebook, Instagram, Linkedin, MapPin].map((Icon, i) => (
