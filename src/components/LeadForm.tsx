@@ -102,7 +102,7 @@ export function LeadForm({
       </div>
 
       <label className="mt-3 flex items-start gap-2 text-xs text-muted-foreground">
-        <input type="checkbox" name="consent" defaultChecked={!consentText} className="mt-0.5" />
+        <input type="checkbox" name="consent" className="mt-0.5" />
         <span>
           {consentText ?? "I consent to be contacted by AJK Law Group regarding my inquiry."}
         </span>
