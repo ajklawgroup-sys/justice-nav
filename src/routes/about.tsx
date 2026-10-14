@@ -25,7 +25,7 @@ export const Route = createFileRoute("/about")({
 const attorneys = [
   {
     name: "Akram Abusharar, Esq.",
-    role: "Immigration Law Specialist",
+    role: "Attorney",
     focus: "Practice Focus: Immigration Law Only",
     licensed: "Licensed in MI and MD",
     initials: "AA",
@@ -34,6 +34,7 @@ const attorneys = [
   {
     name: "Lewis Jubran, Esq.",
     role: "Attorney",
+    focus: "Practice Focus: Personal Injury and Immigration Law",
     licensed: "Licensed in CA and D.C.",
     initials: "LJ",
     bio: "A dedicated advocate who fights tirelessly to protect clients' rights in both personal injury and immigration matters.",
@@ -41,6 +42,7 @@ const attorneys = [
   {
     name: "Salah Khatib, Esq.",
     role: "Attorney",
+    focus: "Practice Focus: Personal Injury and Immigration Law",
     licensed: "Licensed in CA",
     initials: "SK",
     bio: "Bringing compassion and tenacity to every case, ensuring each client is treated like family.",
