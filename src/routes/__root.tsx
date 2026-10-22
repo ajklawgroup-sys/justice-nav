@@ -8,6 +8,10 @@ import {
   type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import {
+  STALE_BUNDLE_RELOAD_SCRIPT,
+  reloadOnceIfStale,
+} from "../lib/stale-bundle";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -42,6 +46,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   const router = useRouter();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reloadOnceIfStale(error);
   }, [error]);
 
   return (
@@ -131,6 +136,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           knowsAbout: ["Personal Injury", "Immigration Law", "Asylum", "Car Accidents"],
         }),
       },
+      { children: STALE_BUNDLE_RELOAD_SCRIPT },
     ],
   }),
   shellComponent: RootShell,

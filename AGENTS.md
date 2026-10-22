@@ -8,3 +8,9 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep every browser dependency the app imports listed in `vite.optimizeDeps.include` in
+  `vite.config.ts`, and keep the guard from `src/lib/stale-bundle.ts` rendered by the root
+  route's `head()` scripts — a browser left holding modules from two different
+  dependency-optimization runs ends up with two React copies, and the router then blanks the
+  page with "Cannot read properties of null (reading 'use')".
