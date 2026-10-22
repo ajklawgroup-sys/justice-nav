@@ -56,6 +56,7 @@ const sections: { heading: string; body: string[] }[] = [
     heading: "5. Sharing of Information",
     body: [
       "We may share your information only as necessary to provide legal services, such as with co-counsel, experts, or service providers who assist our practice, or as required by law or court order. Any form submission service we use processes your inquiry solely on our behalf.",
+      "All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the Text Message services.",
     ],
   },
   {
